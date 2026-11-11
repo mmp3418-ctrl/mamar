@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#013473">
+    <title>الممر | للشحن البحري والجوي والخدمات اللوجستية</title>
+    <meta name="description" content="شركة الممر للشحن البحري والجوي والخدمات اللوجستية - حلول شحن متكاملة، تخليص جمركي، وتتبع شحنات. تابعة لشركة المتحدة بلس. المقر الرئيسي بنغازي، فروع في إسطنبول وكوالالمبور وبالي.">
+    <meta name="keywords" content="الممر, شحن بحري, شحن جوي, خدمات لوجستية, تخليص جمركي, بنغازي, إسطنبول, كوالالمبور, بالي">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Brand */
+            --brand-navy: #013473;
+            --brand-dark: #0B2545;
+            --brand-ocean: #2874B2;
+
+            /* Surfaces */
+            --surface-main: #FFFFFF;
+            --surface-soft: #F5F7FA;
+            --surface-blue: #EAF2F8;
+
+            /* Typography */
+            --heading-color: #0B2545;
+            --body-color: #45566B;
+            --muted-color: #8493A5;
+
+            /* UI */
+            --button-primary: #013473;
+            --button-hover: #2874B2;
+            --border-color: #DCE5EF;
+
+            /* Extras */
+            --accent-glow: 0 8px 32px rgba(40, 116, 178, 0.25);
+            --shadow-sm: 0 2px 10px rgba(11, 37, 69, 0.05);
+            --shadow-md: 0 8px 30px rgba(11, 37, 69, 0.08);
+            --shadow-lg: 0 20px 60px rgba(11, 37, 69, 0.15);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --font: 'Cairo', sans-serif;
+            --font-display: 'Space Grotesk', 'Cairo', sans-serif;
+            --header-h: 72px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--surface-soft);
+            color: var(--body-color);
+            line-height: 1.75;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; transition: var(--transition); }
+
+        h1, h2, h3, h4 { color: var(--heading-color); font-weight: 800; line-height: 1.3; }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== Icons ===== */
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .icon-sm { width: 16px; height: 16px; }
+        .icon-lg { width: 32px; height: 32px; }
+
+        /* ===== Header ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            height: var(--header-h);
+            background: rgba(255, 255, 255, 0.85);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+        }
+
+        .header.scrolled {
+            height: 64px;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom-color: var(--border-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            gap: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            min-width: 0;
+        }
+
+        .logo-img { height: 44px; width: auto; object-fit: contain; border-radius: 8px; }
+
+        .logo-mark {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--brand-navy), var(--brand-ocean));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--surface-main);
+            font-size: 1.3rem;
+            font-weight: 900;
+            box-shadow: 0 6px 18px rgba(1, 52, 115, 0.3);
+            flex-shrink: 0;
+            font-family: var(--font-display);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+            min-width: 0;
+        }
+
+        .logo-text .main {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--heading-color);
+            letter-spacing: -0.3px;
+        }
+
+        .logo-text .sub {
+            font-size: 0.55rem;
+            font-weight: 600;
+            color: var(--muted-color);
+            letter-spacing: 0.5px;
+        }
+
+        .nav { display: none; }
+        .nav ul { display: flex; gap: 2px; }
+
+        .nav a {
+            padding: 8px 14px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--body-color);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .nav a:hover { background: var(--surface-blue); color: var(--brand-navy); }
+
+        .nav a.active {
+            background: var(--button-primary);
+            color: var(--surface-main);
+            box-shadow: 0 4px 12px rgba(1, 52, 115, 0.25);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 26px;
+            font-family: var(--font);
+            font-size: 0.92rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-sm { padding: 9px 20px; font-size: 0.82rem; }
+
+        .btn-primary {
+            background: var(--button-primary);
+            color: var(--surface-main);
+            box-shadow: 0 6px 20px rgba(1, 52, 115, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: var(--button-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(40, 116, 178, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--surface-main);
+            border-color: var(--surface-main);
+        }
+
+        .btn-outline:hover {
+            background: var(--surface-main);
+            color: var(--brand-navy);
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            width: 42px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            background: var(--surface-soft);
+            border-radius: 10px;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .hamburger span {
+            width: 20px;
+            height: 2px;
+            background: var(--brand-navy);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+        /* ===== Mobile Menu ===== */
+        .mobile-menu {
+            position: fixed;
+            top: var(--header-h);
+            left: 0;
+            right: 0;
+            background: var(--surface-main);
+            box-shadow: var(--shadow-lg);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            z-index: 999;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-menu.active { max-height: 500px; overflow-y: auto; }
+
+        .mobile-menu a {
+            display: flex;
+            align-items: center;
+            padding: 15px 24px;
+            font-weight: 600;
+            color: var(--body-color);
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a:active { background: var(--surface-blue); color: var(--brand-navy); }
+
+        /* ===== Hero ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(var(--header-h) + 60px) 0 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            animation: slowZoom 30s ease-in-out infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(11, 37, 69, 0.94) 0%, rgba(1, 52, 115, 0.8) 50%, rgba(40, 116, 178, 0.75) 100%);
+            z-index: 1;
+        }
+
+        /* Grid pattern overlay */
+        .hero-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            color: var(--surface-main);
+            padding: 0 8px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-badge .dot {
+            width: 7px;
+            height: 7px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            flex-shrink: 0;
+            box-shadow: 0 0 12px #4ade80;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            color: var(--surface-main);
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #EAF2F8 0%, #2874B2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero p {
+            font-size: 0.95rem;
+            opacity: 0.92;
+            margin-bottom: 32px;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.9;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 56px;
+            padding-top: 36px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .hero-stat h3 {
+            font-size: 1.7rem;
+            font-weight: 900;
+            margin-bottom: 4px;
+            color: var(--surface-main);
+            font-family: var(--font-display);
+        }
+
+        .hero-stat p {
+            font-size: 0.75rem;
+            opacity: 0.75;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* ===== Sections ===== */
+        .section { padding: 80px 0; position: relative; }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--brand-ocean);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            padding: 6px 18px;
+            background: var(--surface-blue);
+            border-radius: 50px;
+        }
+
+        .section-title {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: var(--heading-color);
+            line-height: 1.3;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--body-color);
+            max-width: 650px;
+            margin: 12px auto 0;
+        }
+
+        /* ===== About ===== */
+        .about-section { background: var(--surface-main); }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--brand-navy), var(--brand-ocean));
+            padding: 36px 28px;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.22;
+            mix-blend-mode: overlay;
+        }
+
+        .about-visual-content {
+            position: relative;
+            z-index: 2;
+            color: var(--surface-main);
+        }
+
+        .about-visual-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 16px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .about-visual h3 {
+            font-size: 1.4rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            color: var(--surface-main);
+        }
+
+        .about-visual p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .about-visual-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 22px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-visual-stat {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            color: var(--surface-main);
+        }
+
+        .about-visual-stat h4 {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--surface-main);
+            margin-bottom: 2px;
+            font-family: var(--font-display);
+        }
+
+        .about-visual-stat p {
+            font-size: 0.72rem;
+            opacity: 0.85;
+            margin: 0;
+        }
+
+        .about-content h2 {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .about-content > p {
+            color: var(--body-color);
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+            line-height: 1.9;
+        }
+
+        .vision-card {
+            background: var(--surface-blue);
+            border-right: 4px solid var(--brand-ocean);
+            border-radius: var(--radius-sm);
+            padding: 20px 22px;
+            margin-top: 20px;
+        }
+
+        .vision-card h4 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: var(--brand-navy);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vision-card p {
+            font-size: 0.88rem;
+            color: var(--body-color);
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        /* ===== Services ===== */
+        .services-section { background: var(--surface-soft); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--surface-main);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 32px 26px;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand-navy), var(--brand-ocean));
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--brand-ocean);
+        }
+
+        .service-card:hover::before { transform: scaleX(1); }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--surface-blue), rgba(40, 116, 178, 0.08));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--brand-navy);
+            transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+            background: linear-gradient(135deg, var(--brand-navy), var(--brand-ocean));
+            color: var(--surface-main);
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--heading-color);
+        }
+
+        .service-card > p {
+            font-size: 0.9rem;
+            color: var(--body-color);
+            line-height: 1.8;
+        }
+
+        /* ===== Booking ===== */
+        .booking-section {
+            background: var(--surface-main);
+            position: relative;
+            overflow: hidden;
+            padding: 90px 0;
+        }
+
+        .booking-section::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(40, 116, 178, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .booking-section::after {
+            content: '';
+            position: absolute;
+            bottom: -25%;
+            left: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(1, 52, 115, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .booking-wrapper {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .booking-content .section-label {
+            background: var(--surface-blue);
+        }
+
+        .booking-content h2 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+            line-height: 1.3;
+            color: var(--heading-color);
+        }
+
+        .booking-content h2 .ocean { color: var(--brand-ocean); }
+
+        .booking-content > p {
+            color: var(--body-color);
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+            line-height: 1.9;
+        }
+
+        .booking-features {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .booking-feature {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+
+        .booking-feature span {
+            width: 32px;
+            height: 32px;
+            background: var(--surface-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-ocean);
+            flex-shrink: 0;
+        }
+
+        /* ===== Booking Card ===== */
+        .booking-card {
+            background: var(--surface-main);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .booking-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--brand-navy), var(--brand-ocean), var(--brand-navy));
+        }
+
+        .booking-card-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .booking-card-header .icon-wrap {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--brand-navy), var(--brand-ocean));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            box-shadow: 0 10px 30px rgba(1, 52, 115, 0.3);
+            color: var(--surface-main);
+        }
+
+        .booking-card-header h3 {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--heading-color);
+            margin-bottom: 6px;
+        }
+
+        .booking-card-header p {
+            font-size: 0.85rem;
+            color: var(--muted-color);
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group { display: flex; flex-direction: column; gap: 7px; }
+
+        .form-group label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--heading-color);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 13px 16px;
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-family: var(--font);
+            font-size: 0.92rem;
+            color: var(--heading-color);
+            background: var(--surface-main);
+            transition: var(--transition);
+            outline: none;
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--muted-color);
+        }
+
+        .form-group select {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23013473' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: left 16px center;
+            background-size: 14px;
+            padding-left: 40px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--brand-ocean);
+            box-shadow: 0 0 0 4px rgba(40, 116, 178, 0.1);
+        }
+
+        .form-group textarea { resize: vertical; min-height: 80px; }
+        .form-row { display: grid; grid-template-columns: 1fr; gap: 14px; }
+
+        .booking-submit {
+            margin-top: 8px;
+            padding: 16px;
+            background: linear-gradient(135deg, #25D366, #1da851);
+            color: white;
+            border-radius: var(--radius-sm);
+            font-family: var(--font);
+            font-size: 1rem;
+            font-weight: 800;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+        }
+
+        .booking-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(37, 211, 102, 0.5);
+        }
+
+        /* ===== Offices ===== */
+        .offices-section { background: var(--surface-soft); }
+
+        .offices-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .office-card {
+            background: var(--surface-main);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .office-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--brand-ocean);
+        }
+
+        .office-card.main {
+            background: linear-gradient(135deg, var(--brand-navy), var(--brand-ocean));
+            border: none;
+            color: var(--surface-main);
+        }
+
+        .office-card.main::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .office-card.main .office-title,
+        .office-card.main .office-address,
+        .office-card.main .office-detail-label { color: var(--surface-main); }
+
+        .office-card.main .office-detail-label { opacity: 0.8; }
+
+        .office-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 2;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .office-flag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .office-card.main .office-flag {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--surface-main);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .office-card:not(.main) .office-flag {
+            background: var(--surface-blue);
+            color: var(--brand-navy);
+        }
+
+        .office-badge {
+            font-size: 0.66rem;
+            font-weight: 900;
+            padding: 4px 12px;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .office-card.main .office-badge {
+            background: var(--surface-main);
+            color: var(--brand-navy);
+        }
+
+        .office-title {
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 6px;
+            color: var(--heading-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        .office-address {
+            font-size: 0.88rem;
+            color: var(--body-color);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .office-details {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border-color);
+            position: relative;
+            z-index: 2;
+        }
+
+        .office-card.main .office-details {
+            border-top-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .office-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .office-detail-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .office-card.main .office-detail-icon {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--surface-main);
+        }
+
+        .office-card:not(.main) .office-detail-icon {
+            background: var(--surface-blue);
+            color: var(--brand-navy);
+        }
+
+        .office-detail-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--muted-color);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .office-detail-value {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            display: block;
+            word-break: break-word;
+        }
+
+        .office-card.main .office-detail-value { color: var(--surface-main); }
+        .office-detail-value a { color: inherit; }
+        .office-detail-value a:hover { color: var(--brand-ocean); }
+        .office-card.main .office-detail-value a:hover { color: #EAF2F8; }
+
+        /* ===== Info Bar ===== */
+        .info-bar { background: var(--surface-main); padding: 60px 0; }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: var(--surface-soft);
+            border: 1px solid var(--border-color);
+            padding: 20px 22px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .info-item:hover {
+            box-shadow: var(--shadow-sm);
+            border-color: var(--brand-ocean);
+            transform: translateY(-2px);
+        }
+
+        .info-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--surface-main);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--brand-navy);
+            flex-shrink: 0;
+        }
+
+        .info-content h4 {
+            font-size: 0.76rem;
+            font-weight: 700;
+            color: var(--muted-color);
+            margin-bottom: 4px;
+        }
+
+        .info-content p,
+        .info-content a {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            word-break: break-word;
+        }
+
+        .info-content a:hover { color: var(--brand-ocean); }
+
+        /* ===== CTA ===== */
+        .cta {
+            background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-ocean) 100%);
+            color: var(--surface-main);
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.12;
+        }
+
+        .cta::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .cta .container { position: relative; z-index: 2; }
+
+        .cta h2 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 14px;
+            line-height: 1.3;
+            color: var(--surface-main);
+        }
+
+        .cta p {
+            opacity: 0.92;
+            margin-bottom: 32px;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+        }
+
+        .cta .btn-primary {
+            background: var(--surface-main);
+            color: var(--brand-navy);
+        }
+
+        .cta .btn-primary:hover {
+            background: var(--surface-blue);
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: var(--brand-dark);
+            color: rgba(255, 255, 255, 0.75);
+            padding: 60px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-brand .logo { color: var(--surface-main); margin-bottom: 16px; }
+        .footer-brand .logo-text .main { color: var(--surface-main); }
+        .footer-brand .logo-text .sub { color: rgba(255, 255, 255, 0.55); }
+        .footer-brand .logo-img { height: 52px; }
+
+        .footer-brand p {
+            font-size: 0.88rem;
+            line-height: 1.9;
+            margin-bottom: 14px;
+        }
+
+        .footer-cr {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 50px;
+            font-size: 0.72rem;
+            color: var(--brand-ocean);
+            font-weight: 700;
+        }
+
+        .footer h4 {
+            color: var(--surface-main);
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--brand-ocean);
+            border-radius: 2px;
+        }
+
+        .footer ul { display: flex; flex-direction: column; gap: 10px; }
+
+        .footer a {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer a:hover { color: var(--surface-main); padding-right: 6px; }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 22px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ===== Floating Buttons ===== */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 900;
+        }
+
+        .floating-btn {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+            transition: var(--transition);
+            position: relative;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .floating-btn:hover { transform: scale(1.1) rotate(5deg); }
+
+        .floating-btn::after {
+            content: attr(data-label);
+            position: absolute;
+            right: calc(100% + 12px);
+            top: 50%;
+            transform: translateY(-50%) translateX(8px);
+            background: var(--brand-dark);
+            color: var(--surface-main);
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+        }
+
+        .floating-btn:hover::after {
+            opacity: 1;
+            transform: translateY(-50%) translateX(0);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366, #1da851);
+            color: white;
+        }
+
+        .call-btn {
+            background: linear-gradient(135deg, var(--brand-navy), var(--brand-ocean));
+            color: white;
+        }
+
+        /* ===== Reveal ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media (max-width: 380px) {
+            .logo-img { height: 36px; }
+            .logo-mark { width: 36px; height: 36px; font-size: 1rem; }
+            .logo-text .main { font-size: 0.95rem; }
+            .logo-text .sub { font-size: 0.5rem; }
+            .hamburger { width: 36px; height: 36px; }
+            .btn-sm { padding: 7px 14px; font-size: 0.75rem; }
+            .hero h1 { font-size: 1.75rem; }
+            .hero-badge { font-size: 0.7rem; padding: 6px 14px; }
+        }
+
+        @media (min-width: 640px) {
+            .container { padding: 0 24px; }
+            .section { padding: 90px 0; }
+            .section-title { font-size: 2rem; }
+            .section-header { margin-bottom: 60px; }
+            .hero h1 { font-size: 2.9rem; }
+            .hero p { font-size: 1.05rem; }
+            .hero-stat h3 { font-size: 2.2rem; }
+            .hero-stat p { font-size: 0.85rem; }
+            .services-grid { grid-template-columns: 1fr 1fr; gap: 22px; }
+            .info-grid { grid-template-columns: 1fr 1fr; }
+            .offices-grid { grid-template-columns: 1fr 1fr; }
+            .about-grid { grid-template-columns: 1fr 1fr; gap: 44px; }
+            .booking-wrapper { gap: 48px; }
+            .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; gap: 44px; }
+            .form-row { grid-template-columns: 1fr 1fr; }
+            .service-card { padding: 34px 28px; }
+            .booking-card { padding: 36px 32px; }
+            .office-card { padding: 30px 26px; }
+            .about-visual { padding: 36px 30px; }
+            .logo-img { height: 48px; }
+            .cta h2 { font-size: 2.2rem; }
+        }
+
+        @media (min-width: 900px) {
+            :root { --header-h: 76px; }
+            .nav { display: block; }
+            .hamburger { display: none; }
+            .mobile-menu { display: none; }
+            .container { padding: 0 36px; }
+            .section { padding: 100px 0; }
+            .section-title { font-size: 2.3rem; }
+            .section-header { margin-bottom: 70px; }
+            .hero h1 { font-size: 3.6rem; }
+            .hero p { font-size: 1.12rem; }
+            .hero-badge { font-size: 0.85rem; padding: 10px 24px; }
+            .hero-stat h3 { font-size: 2.4rem; }
+            .hero-stat p { font-size: 0.88rem; }
+            .hero-stats { gap: 28px; margin-top: 64px; padding-top: 44px; }
+            .logo-img { height: 52px; }
+            .logo-mark { width: 48px; height: 48px; font-size: 1.4rem; }
+            .logo-text .main { font-size: 1.25rem; }
+            .logo-text .sub { font-size: 0.6rem; }
+            .services-grid { grid-template-columns: repeat(3, 1fr); gap: 26px; }
+            .offices-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .booking-wrapper { grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+            .booking-section { padding: 120px 0; }
+            .booking-content h2 { font-size: 2.4rem; }
+            .about-content h2 { font-size: 2rem; }
+            .cta h2 { font-size: 2.4rem; }
+            .cta p { font-size: 1.08rem; }
+            .cta { padding: 100px 20px; }
+            .about-grid { gap: 60px; }
+            .about-visual { min-height: 380px; padding: 44px; }
+            .about-visual h3 { font-size: 1.6rem; }
+            .about-visual p { font-size: 0.95rem; }
+            .service-card { padding: 40px 32px; }
+            .service-card h3 { font-size: 1.15rem; }
+            .service-card > p { font-size: 0.92rem; }
+            .service-icon { width: 66px; height: 66px; }
+            .booking-card { padding: 44px 40px; }
+            .booking-card-header .icon-wrap { width: 72px; height: 72px; }
+            .booking-card-header h3 { font-size: 1.5rem; }
+            .office-card { padding: 34px 30px; }
+            .office-title { font-size: 1.3rem; }
+            .info-item { padding: 26px 28px; }
+            .footer { padding: 80px 0 0; }
+            .footer-grid { grid-template-columns: 1.6fr 1fr 1fr; gap: 60px; padding-bottom: 50px; }
+            .footer h4 { font-size: 1.05rem; }
+            .footer a { font-size: 0.92rem; }
+            .footer-brand .logo-img { height: 60px; }
+            .floating-buttons { bottom: 28px; left: 28px; gap: 14px; }
+            .floating-btn { width: 58px; height: 58px; }
+            .section-subtitle { font-size: 1.05rem; }
+            .booking-content > p { font-size: 1.05rem; }
+            .booking-feature { font-size: 1rem; }
+        }
+
+        @media (min-width: 1100px) {
+            .offices-grid { grid-template-columns: repeat(4, 1fr); }
+            .hero h1 { font-size: 4.1rem; }
+        }
+
+        html[dir="rtl"] .form-group select {
+            background-position: left 16px center;
+            padding-left: 40px;
+            padding-right: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                font-size: 16px;
+            }
+        }
+
+        @supports (padding: env(safe-area-inset-bottom)) {
+            .floating-buttons {
+                bottom: calc(20px + env(safe-area-inset-bottom));
+                left: calc(20px + env(safe-area-inset-left));
+            }
+            .footer-bottom {
+                padding-bottom: calc(22px + env(safe-area-inset-bottom));
+            }
+        }
+
+        html, body { max-width: 100%; }
+        .hero, .section, .cta, .footer { overflow-x: hidden; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#home" class="logo" id="logoContainer" aria-label="الممر للشحن البحري والجوي والخدمات اللوجستية"></a>
+            <nav class="nav" id="mainNav" aria-label="التنقل الرئيسي">
+                <ul>
+                    <li><a href="#home" class="active">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#booking">اطلب شحن</a></li>
+                    <li><a href="#offices">فروعنا</a></li>
+                    <li><a href="#contact">تواصل</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#booking" class="btn btn-primary btn-sm">اطلب شحنتك</a>
+                <button class="hamburger" id="hamburger" aria-label="القائمة" aria-expanded="false" aria-controls="mobileMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="قائمة الجوال">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">من نحن</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#booking">اطلب شحن</a>
+        <a href="#offices">فروعنا</a>
+        <a href="#contact">تواصل معنا</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">
+                <span class="dot"></span>
+                شركة المتحدة بلس · سجل تجاري 2026-06-0219
+            </span>
+            <h1>الممر للشحن البحري والجوي<br>والخدمات <span class="highlight">اللوجستية</span></h1>
+            <p>حلول شحن متكاملة من الباب إلى الباب، تخليص جمركي، وتتبع لحظي لشحناتك — نربط ليبيا بالعالم عبر شبكة وكلاء موثوقة من بنغازي إلى إسطنبول وكوالالمبور وبالي.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">اطلب شحنتك الآن</a>
+                <a href="#services" class="btn btn-outline">استكشف خدماتنا</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <h3>4</h3>
+                    <p>مقرات حول العالم</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>+5000</h3>
+                    <p>شحنة ناجحة</p>
+                </div>
+                <div class="hero-stat">
+                    <h3>24/7</h3>
+                    <p>تتبع ومتابعة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <div class="about-visual-content">
+                        <span class="about-visual-badge">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M2 21h20M4 21V8l8-5 8 5v13M9 21v-7h6v7"/></svg>
+                            من نحن
+                        </span>
+                        <h3>شركة <span style="color:#EAF2F8;">الممر</span><br>للشحن والخدمات اللوجستية</h3>
+                        <p>إحدى شركات المتحدة بلس للخدمات الإعلامية والتسويقية واللوجستية، نقدم حلول شحن بحري وجوي وخدمات لوجستية متكاملة.</p>
+                    </div>
+                    <div class="about-visual-stats">
+                        <div class="about-visual-stat">
+                            <h4>4</h4>
+                            <p>مقرات وفروع</p>
+                        </div>
+                        <div class="about-visual-stat">
+                            <h4>2026</h4>
+                            <p>سجل تجاري</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content reveal delay-1">
+                    <span class="section-label">من نحن</span>
+                    <h2>نربط تجارتك بالعالم بثقة واحترافية</h2>
+                    <p>شركة الممر للشحن البحري والجوي والخدمات اللوجستية هي إحدى شركات المتحدة بلس للخدمات الإعلامية والتسويقية واللوجستية، متخصصة في الشحن البحري والجوي والخدمات اللوجستية. نقدم حلولاً متكاملة تشمل الشحن من الباب إلى الباب، والتخليص الجمركي، والتخزين، والتوزيع، وتتبع الشحنات.</p>
+                    <div class="vision-card">
+                        <h4>
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                            رؤيتنا
+                        </h4>
+                        <p>أن نكون الشريك اللوجستي الأول في ليبيا، ونربط السوق الليبي بجميع الأسواق العالمية عبر حلول شحن موثوقة وسريعة وشفافة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">خدماتنا</span>
+                <h2 class="section-title">حلول شحن متكاملة لاحتياجاتك</h2>
+                <p class="section-subtitle">خدمات لوجستية احترافية بإشراف فريق متخصص</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/><path d="M2 22h20"/></svg>
+                    </div>
+                    <h3>الشحن البحري</h3>
+                    <p>شحن الحاويات الكاملة (FCL) والجزئية (LCL) من وإلى جميع الموانئ العالمية بأفضل الأسعار وأوقات العبور.</p>
+                </div>
+                <div class="service-card reveal delay-1">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+                    </div>
+                    <h3>الشحن الجوي</h3>
+                    <p>خدمات شحن جوي سريعة للبضائع الحساسة للوقت، مع متابعة دقيقة من نقطة الانطلاق حتى التسليم.</p>
+                </div>
+                <div class="service-card reveal delay-2">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 5-3 9-9 9s-9-4-9-9 3-9 9-9c2 0 4 .7 5.5 2"/><path d="M16 2v4h4"/></svg>
+                    </div>
+                    <h3>التخليص الجمركي</h3>
+                    <p>فريق متخصص في إنهاء كافة الإجراءات الجمركية بكفاءة وسرعة، لضمان وصول بضاعتك دون تأخير.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3>النقل البري</h3>
+                    <p>خدمات نقل داخلي وتوزيع بكفاءة عبر أسطول شاحنات حديث يغطي جميع المدن الليبية.</p>
+                </div>
+                <div class="service-card reveal delay-1">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <h3>التخزين والتوزيع</h3>
+                    <p>مستودعات آمنة ومجهزة لإدارة المخزون والتوزيع بكفاءة عالية وفق أحدث المعايير.</p>
+                </div>
+                <div class="service-card reveal delay-2">
+                    <div class="service-icon">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>تتبع الشحنات</h3>
+                    <p>نظام تتبع لحظي لشحنتك على مدار الساعة، مع إشعارات دورية بكل مرحلة من مراحل الشحن.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section booking-section" id="booking">
+        <div class="container booking-wrapper">
+            <div class="booking-content reveal">
+                <span class="section-label">اطلب شحنتك</span>
+                <h2>شحنتك في أيدٍ أمينة<br>على بُعد <span class="ocean">نقرة واحدة</span></h2>
+                <p>املأ بيانات الشحنة وسنتواصل معك فورًا عبر واتساب لتأكيد التفاصيل وتقديم أفضل الأسعار.</p>
+                <div class="booking-features">
+                    <div class="booking-feature">
+                        <span><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        عرض سعر خلال 24 ساعة
+                    </div>
+                    <div class="booking-feature">
+                        <span><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        تتبع لحظي للشحنة
+                    </div>
+                    <div class="booking-feature">
+                        <span><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+                        دعم ومتابعة من السبت إلى الخميس
+                    </div>
+                </div>
+            </div>
+
+            <div class="booking-card reveal delay-1">
+                <div class="booking-card-header">
+                    <div class="icon-wrap">
+                        <svg class="icon icon-lg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3>اطلب شحنتك</h3>
+                    <p>سيتم إرسال طلبك مباشرة عبر واتساب</p>
+                </div>
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label for="fullName">الاسم الكامل / اسم الشركة</label>
+                        <input type="text" id="fullName" placeholder="أدخل اسمك أو اسم الشركة" required autocomplete="name">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" placeholder="09XXXXXXXX" required autocomplete="tel" inputmode="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceType">نوع الشحن</label>
+                            <select id="serviceType" required>
+                                <option value="">اختر نوع الشحن</option>
+                                <option value="شحن بحري FCL">شحن بحري - حاوية كاملة (FCL)</option>
+                                <option value="شحن بحري LCL">شحن بحري - حاوية جزئية (LCL)</option>
+                                <option value="شحن جوي">شحن جوي</option>
+                                <option value="تخليص جمركي">تخليص جمركي</option>
+                                <option value="نقل بري">نقل بري</option>
+                                <option value="تخزين وتوزيع">تخزين وتوزيع</option>
+                                <option value="أخرى">أخرى</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="origin">بلد المنشأ</label>
+                            <input type="text" id="origin" placeholder="مثال: تركيا">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">الوجهة</label>
+                            <input type="text" id="destination" placeholder="مثال: بنغازي">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="weight">الوزن التقريبي (كجم)</label>
+                            <input type="number" id="weight" placeholder="مثال: 500" min="1" inputmode="numeric">
+                        </div>
+                        <div class="form-group">
+                            <label for="departDate">تاريخ الشحن المطلوب</label>
+                            <input type="date" id="departDate">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">وصف البضاعة / ملاحظات</label>
+                        <textarea id="notes" placeholder="نوع البضاعة، عدد الطرود، أي تفاصيل إضافية..."></textarea>
+                    </div>
+                    <button type="submit" class="booking-submit">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+                        إرسال طلب الشحن عبر واتساب
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offices -->
+    <section class="section offices-section" id="offices">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">فروعنا</span>
+                <h2 class="section-title">شبكة مكاتبنا حول العالم</h2>
+                <p class="section-subtitle">المقر الرئيسي في بنغازي — وفروع في إسطنبول وكوالالمبور وبالي</p>
+            </div>
+            <div class="offices-grid">
+
+                <div class="office-card main reveal">
+                    <div class="office-header">
+                        <span class="office-flag">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            ليبيا
+                        </span>
+                        <span class="office-badge">المقر الرئيسي</span>
+                    </div>
+                    <h3 class="office-title">بنغازي</h3>
+                    <p class="office-address">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        بنغازي، ليبيا
+                    </p>
+                    <div class="office-details">
+                        <div class="office-detail-item">
+                            <div class="office-detail-icon">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+                            </div>
+                            <div>
+                                <span class="office-detail-label">واتساب</span>
+                                <span class="office-detail-value"><a href="https://wa.me/218920010505" target="_blank" rel="noopener">0920010505</a></span>
+                            </div>
+                        </div>
+                        <div class="office-detail-item">
+                            <div class="office-detail-icon">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="office-detail-label">المكالمات</span>
+                                <span class="office-detail-value"><a href="tel:+218920010505">0920010505</a></span>
+                            </div>
+                        </div>
+                        <div class="office-detail-item">
+                            <div class="office-detail-icon">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
+                            <div>
+                                <span class="office-detail-label">أيام العمل</span>
+                                <span class="office-detail-value">السبت — الخميس</span>
+                            </div>
+                        </div>
+                        <div class="office-detail-item">
+                            <div class="office-detail-icon">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="office-detail-label">الموقع على الخريطة</span>
+                                <span class="office-detail-value"><a href="https://maps.app.goo.gl/VvFdZ2YcK5aTRnBr8?g_st=ic" target="_blank" rel="noopener">عرض على Google Maps</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="office-card reveal delay-1">
+                    <div class="office-header">
+                        <span class="office-flag">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            تركيا
+                        </span>
+                    </div>
+                    <h3 class="office-title">إسطنبول</h3>
+                    <p class="office-address">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        إسطنبول، تركيا
+                    </p>
+                    <div class="office-details">
+                        <div class="office-detail-item">
+                            <div class="office-detail-icon">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            </div>
+                            <div>
+                                <span class="office-detail-label">الخدمة</span>
+                                <span class="office-detail-value">شحن وتخليص</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="office-card reveal delay-2">
+                    <div class="office-header">
+                        <span class="office-flag">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            ماليزيا
+                        </span>
+                    </div>
+                    <h3 class="office-title">كوالالمبور</h3>
+                    <p class="office-address">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        كوالالمبور، ماليزيا
+                    </p>
+                    <div class="office-details">
+                        <div class="office-detail-item">
+                            <div class="office-detail-icon">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/><path d="M2 22h20"/></svg>
+                            </div>
+                            <div>
+                                <span class="office-detail-label">الخدمة</span>
+                                <span class="office-detail-value">شحن بحري وجوي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="office-card reveal delay-3">
+                    <div class="office-header">
+                        <span class="office-flag">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            إندونيسيا
+                        </span>
+                    </div>
+                    <h3 class="office-title">بالي</h3>
+                    <p class="office-address">
+                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        بالي، إندونيسيا
+                    </p>
+                    <div class="office-details">
+                        <div class="office-detail-item">
+                            <div class="office-detail-icon">
+                                <svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                            </div>
+                            <div>
+                                <span class="office-detail-label">الخدمة</span>
+                                <span class="office-detail-value">شحن وتخليص</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Bar -->
+    <section class="info-bar">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item reveal">
+                    <div class="info-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>واتساب</h4>
+                        <a href="https://wa.me/218920010505" target="_blank" rel="noopener">0920010505</a>
+                    </div>
+                </div>
+                <div class="info-item reveal delay-1">
+                    <div class="info-icon">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>المكالمات</h4>
+                        <a href="tel:+218920010505">0920010505</a>
+                    </div>
+                </div>
+                <div class="info-item reveal delay-2">
+                    <div class="info-icon">
+                        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>أيام العمل</h4>
+                        <p>السبت — الخميس</p>
+                    </div>
+                </div>
+                <div class="info-item reveal delay-3">
+                    <div class="info-icon">
+                        <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <div class="info-content">
+                        <h4>السجل التجاري</h4>
+                        <p>2026-06-0219</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <div class="container reveal">
+            <h2>جاهز لشحن بضاعتك؟</h2>
+            <p>تواصل معنا اليوم واحصل على عرض سعر مخصص وخطة شحن تناسب احتياجاتك.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/218920010505" target="_blank" rel="noopener" class="btn btn-primary">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+                    تواصل عبر واتساب
+                </a>
+                <a href="tel:+218920010505" class="btn btn-outline">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    اتصل بنا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" id="logoFooter"></div>
+                    <p>شركة الممر للشحن البحري والجوي والخدمات اللوجستية — إحدى شركات المتحدة بلس للخدمات الإعلامية والتسويقية واللوجستية. نقدم حلول شحن بحري وجوي وخدمات لوجستية متكاملة.</p>
+                    <span class="footer-cr">السجل التجاري: 2026-06-0219</span>
+                </div>
+                <div>
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#booking">اطلب شحن</a></li>
+                        <li><a href="#offices">فروعنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><a href="https://wa.me/218920010505" target="_blank" rel="noopener">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8z"/></svg>
+                            واتساب: 0920010505
+                        </a></li>
+                        <li><a href="tel:+218920010505">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            هاتف: 0920010505
+                        </a></li>
+                        <li><a href="https://maps.app.goo.gl/VvFdZ2YcK5aTRnBr8?g_st=ic" target="_blank" rel="noopener">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            بنغازي، ليبيا
+                        </a></li>
+                        <li><a href="#offices">
+                            <svg class="icon icon-sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            السبت — الخميس
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 الممر للشحن البحري والجوي والخدمات اللوجستية — إحدى شركات المتحدة بلس. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/218920010505" target="_blank" rel="noopener" class="floating-btn whatsapp-btn" data-label="واتساب" aria-label="واتساب">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.89.53 3.66 1.44 5.18L2 22l4.99-1.31A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.58-1.24l-.33-.19-2.96-.78.31.31A7.98 7.98 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.5-5.5c-.25-.12-1.47-.72-1.69-.8-.22-.08-.38-.12-.54.12-.16.25-.62.8-.76.97-.14.16-.28.18-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.54-1.3-.74-1.79-.2-.47-.4-.4-.54-.4-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+        </a>
+        <a href="tel:+218920010505" class="floating-btn call-btn" data-label="اتصل بنا" aria-label="اتصال">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+    </div>
+
+    <script>
+        // ============================================
+        // ⭐ الشعار — lo.png (ضع ملف الشعار في نفس المجلد)
+        // ============================================
+        const LOGO_URL = "lo.png";
+        const COMPANY_NAME = "الممر";
+        const COMPANY_SUB = "شحن · لوجستيك";
+        // ============================================
+
+        function renderLogo() {
+            const fallback = `<span class="logo-mark" ${LOGO_URL ? 'style="display:none"' : ''}>م</span>
+                <span class="logo-text">
+                    <span class="main">${COMPANY_NAME}</span>
+                    <span class="sub">${COMPANY_SUB}</span>
+                </span>`;
+
+            const html = LOGO_URL
+                ? `<img src="${LOGO_URL}" alt="${COMPANY_NAME} للشحن البحري والجوي والخدمات اللوجستية" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">${fallback}`
+                : fallback;
+
+            document.getElementById('logoContainer').innerHTML = html;
+            document.getElementById('logoFooter').innerHTML = html;
+        }
+        renderLogo();
+
+        // Header scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 40);
+        });
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        hamburger.addEventListener('click', () => {
+            const isOpen = hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu on resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 900) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const offset = 85;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Active nav on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                if (window.scrollY >= section.offsetTop - 130) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+            });
+        });
+
+        // Reveal on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Booking form -> WhatsApp
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('fullName').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const serviceType = document.getElementById('serviceType').value;
+            const origin = document.getElementById('origin').value.trim();
+            const destination = document.getElementById('destination').value.trim();
+            const weight = document.getElementById('weight').value;
+            const departDate = document.getElementById('departDate').value;
+            const notes = document.getElementById('notes').value.trim();
+
+            let msg = `📦 *طلب شحن جديد — الممر للشحن البحري والجوي والخدمات اللوجستية* 📦\n\n`;
+            msg += `👤 *الاسم / الشركة:* ${name}\n`;
+            msg += `📱 *رقم الهاتف:* ${phone}\n`;
+            msg += `🚚 *نوع الشحن:* ${serviceType}\n`;
+            if (origin) msg += `🌍 *بلد المنشأ:* ${origin}\n`;
+            if (destination) msg += `📍 *الوجهة:* ${destination}\n`;
+            if (weight) msg += `⚖️ *الوزن التقريبي:* ${weight} كجم\n`;
+            if (departDate) msg += `📅 *تاريخ الشحن المطلوب:* ${departDate}\n`;
+            if (notes) msg += `📝 *وصف البضاعة:* ${notes}\n`;
+            msg += `\nيرجى التواصل لتأكيد الشحنة وتقديم عرض السعر.`;
+
+            window.open(`https://wa.me/218920010505?text=${encodeURIComponent(msg)}`, '_blank');
+        });
+    </script>
+</body>
+</html>
