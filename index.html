@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#013473">
     <title>الممر | للشحن البحري والجوي والخدمات اللوجستية</title>
-    <meta name="description" content="شركة الممر للشحن البحري والجوي والخدمات اللوجستية - حلول شحن متكاملة، تخليص جمركي، وتتبع شحنات. تابعة لشركة المتحدة بلس. المقر الرئيسي بنغازي، فروع في إسطنبول وكوالالمبور وبالي.">
-    <meta name="keywords" content="الممر, شحن بحري, شحن جوي, خدمات لوجستية, تخليص جمركي, بنغازي, إسطنبول, كوالالمبور, بالي">
+    <meta name="description" content="شركة الممر للشحن البحري والجوي والخدمات اللوجستية - حلول شحن متكاملة، تخليص جمركي، وتتبع شحنات. تابعة لشركة المتحدة بلس. المقر الرئيسي بنغازي، وفرع في إسطنبول.">
+    <meta name="keywords" content="الممر, شحن بحري, شحن جوي, خدمات لوجستية, تخليص جمركي, بنغازي, إسطنبول">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -329,7 +329,6 @@
             z-index: 1;
         }
 
-        /* Grid pattern overlay */
         .hero-overlay::after {
             content: '';
             position: absolute;
@@ -914,14 +913,16 @@
         .offices-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .office-card {
             background: var(--surface-main);
             border: 1px solid var(--border-color);
             border-radius: var(--radius);
-            padding: 28px 24px;
+            padding: 32px 28px;
             transition: var(--transition);
             box-shadow: var(--shadow-sm);
             position: relative;
@@ -1004,7 +1005,7 @@
         }
 
         .office-title {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 900;
             margin-bottom: 6px;
             color: var(--heading-color);
@@ -1410,7 +1411,7 @@
             .logo-text .main { font-size: 1.25rem; }
             .logo-text .sub { font-size: 0.6rem; }
             .services-grid { grid-template-columns: repeat(3, 1fr); gap: 26px; }
-            .offices-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+            .offices-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
             .booking-wrapper { grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
             .booking-section { padding: 120px 0; }
             .booking-content h2 { font-size: 2.4rem; }
@@ -1429,8 +1430,8 @@
             .booking-card { padding: 44px 40px; }
             .booking-card-header .icon-wrap { width: 72px; height: 72px; }
             .booking-card-header h3 { font-size: 1.5rem; }
-            .office-card { padding: 34px 30px; }
-            .office-title { font-size: 1.3rem; }
+            .office-card { padding: 36px 32px; }
+            .office-title { font-size: 1.35rem; }
             .info-item { padding: 26px 28px; }
             .footer { padding: 80px 0 0; }
             .footer-grid { grid-template-columns: 1.6fr 1fr 1fr; gap: 60px; padding-bottom: 50px; }
@@ -1445,7 +1446,6 @@
         }
 
         @media (min-width: 1100px) {
-            .offices-grid { grid-template-columns: repeat(4, 1fr); }
             .hero h1 { font-size: 4.1rem; }
         }
 
@@ -1524,15 +1524,15 @@
                 شركة المتحدة بلس · سجل تجاري 2026-06-0219
             </span>
             <h1>الممر للشحن البحري والجوي<br>والخدمات <span class="highlight">اللوجستية</span></h1>
-            <p>حلول شحن متكاملة من الباب إلى الباب، تخليص جمركي، وتتبع لحظي لشحناتك — نربط ليبيا بالعالم عبر شبكة وكلاء موثوقة من بنغازي إلى إسطنبول وكوالالمبور وبالي.</p>
+            <p>حلول شحن متكاملة من الباب إلى الباب، تخليص جمركي، وتتبع لحظي لشحناتك — نربط ليبيا بالعالم عبر شبكة وكلاء موثوقة من بنغازي إلى إسطنبول.</p>
             <div class="hero-buttons">
                 <a href="#booking" class="btn btn-primary">اطلب شحنتك الآن</a>
                 <a href="#services" class="btn btn-outline">استكشف خدماتنا</a>
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <h3>4</h3>
-                    <p>مقرات حول العالم</p>
+                    <h3>2</h3>
+                    <p>مقران رئيسيان</p>
                 </div>
                 <div class="hero-stat">
                     <h3>+5000</h3>
@@ -1561,8 +1561,8 @@
                     </div>
                     <div class="about-visual-stats">
                         <div class="about-visual-stat">
-                            <h4>4</h4>
-                            <p>مقرات وفروع</p>
+                            <h4>2</h4>
+                            <p>مقرات رئيسية</p>
                         </div>
                         <div class="about-visual-stat">
                             <h4>2026</h4>
@@ -1734,8 +1734,8 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-label">فروعنا</span>
-                <h2 class="section-title">شبكة مكاتبنا حول العالم</h2>
-                <p class="section-subtitle">المقر الرئيسي في بنغازي — وفروع في إسطنبول وكوالالمبور وبالي</p>
+                <h2 class="section-title">مقران رئيسيان حول العالم</h2>
+                <p class="section-subtitle">المقر الرئيسي في بنغازي — وفرع في إسطنبول</p>
             </div>
             <div class="offices-grid">
 
@@ -1803,56 +1803,6 @@
                     <p class="office-address">
                         <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         إسطنبول، تركيا
-                    </p>
-                    <div class="office-details">
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">الخدمة</span>
-                                <span class="office-detail-value">شحن وتخليص</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="office-card reveal delay-2">
-                    <div class="office-header">
-                        <span class="office-flag">
-                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            ماليزيا
-                        </span>
-                    </div>
-                    <h3 class="office-title">كوالالمبور</h3>
-                    <p class="office-address">
-                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        كوالالمبور، ماليزيا
-                    </p>
-                    <div class="office-details">
-                        <div class="office-detail-item">
-                            <div class="office-detail-icon">
-                                <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/><path d="M2 22h20"/></svg>
-                            </div>
-                            <div>
-                                <span class="office-detail-label">الخدمة</span>
-                                <span class="office-detail-value">شحن بحري وجوي</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="office-card reveal delay-3">
-                    <div class="office-header">
-                        <span class="office-flag">
-                            <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            إندونيسيا
-                        </span>
-                    </div>
-                    <h3 class="office-title">بالي</h3>
-                    <p class="office-address">
-                        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        بالي، إندونيسيا
                     </p>
                     <div class="office-details">
                         <div class="office-detail-item">
